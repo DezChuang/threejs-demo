@@ -10,6 +10,8 @@ function initStats() {
 
 // 自訂頂點創建粒子系統
 function createVerticesPoints() {
+  // r106 版後，用 Geometry 會噴錯，參考 https://github.com/mrdoob/three.js/issues/16928
+
   const geometry = new THREE.Geometry() // 先宣告一個空的幾何體
   const material = new THREE.PointsMaterial({
     size: 4,
